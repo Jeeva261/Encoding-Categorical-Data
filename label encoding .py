@@ -7,3 +7,7 @@ df=pd.read_csv(file_path)
 encoding=LabelEncoder()
 df["new_name"]=encoding.fit_transform(df["Name"])
 print(df)
+
+# inverse_transform
+df["original name"]=encoding.inverse_transform(df["new_name"])
+print(df)
